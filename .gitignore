@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Claude
+.claude/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Backend (WordPress) — only track custom theme/plugin code
+backend/wp-content/uploads/
+backend/wp-content/cache/
+backend/wp-content/upgrade/
+
+# Node
+node_modules/
