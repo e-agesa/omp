@@ -4,7 +4,20 @@ import { ShopContent } from "@/components/shop/ShopContent";
 
 export const metadata: Metadata = {
   title: "Shop",
-  description: "Browse medicines, supplements, beauty products and more at OMP Kenya.",
+  description: "Browse medicines, supplements, beauty products and more at Our Mall Pharmacy Kenya.",
+  keywords: [
+    "buy medicines online Kenya",
+    "health products Nairobi",
+    "online pharmacy shop",
+    "supplements Kenya",
+    "beauty products pharmacy",
+    "Our Mall Pharmacy shop",
+  ],
+  openGraph: {
+    title: "Shop | Our Mall Pharmacy",
+    description: "Browse medicines, supplements, beauty products and more at Our Mall Pharmacy Kenya.",
+    url: "https://ourmallpharmacy.com/shop/",
+  },
 };
 
 function ProductSkeleton() {

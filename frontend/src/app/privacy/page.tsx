@@ -3,7 +3,20 @@ import { LegalPage } from "@/components/legal/LegalPage";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "OMP Privacy Policy — how we collect, use, and protect your personal data.",
+  description: "Our Mall Pharmacy Privacy Policy — how we collect, use, and protect your personal data.",
+  keywords: [
+    "pharmacy privacy policy Kenya",
+    "data protection pharmacy",
+    "Our Mall Pharmacy privacy",
+    "Kenya Data Protection Act",
+    "health data privacy",
+    "pharmacy personal data Kenya",
+  ],
+  openGraph: {
+    title: "Privacy Policy | Our Mall Pharmacy",
+    description: "Our Mall Pharmacy Privacy Policy — how we collect, use, and protect your personal data.",
+    url: "https://ourmallpharmacy.com/privacy/",
+  },
 };
 
 export default function PrivacyPage() {

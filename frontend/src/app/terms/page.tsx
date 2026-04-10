@@ -3,7 +3,20 @@ import { LegalPage } from "@/components/legal/LegalPage";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "OMP Terms of Service — the rules governing use of our platform and services.",
+  description: "Our Mall Pharmacy Terms of Service — the rules governing use of our platform and services.",
+  keywords: [
+    "terms of service pharmacy",
+    "Our Mall Pharmacy terms",
+    "online pharmacy terms Kenya",
+    "pharmacy user agreement",
+    "pharmacy legal terms Nairobi",
+    "e-commerce pharmacy terms",
+  ],
+  openGraph: {
+    title: "Terms of Service | Our Mall Pharmacy",
+    description: "Our Mall Pharmacy Terms of Service — the rules governing use of our platform and services.",
+    url: "https://ourmallpharmacy.com/terms/",
+  },
 };
 
 export default function TermsPage() {

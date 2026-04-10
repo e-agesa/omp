@@ -4,6 +4,19 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "My Health",
   description: "Manage your account, prescriptions, orders and health dashboard.",
+  keywords: [
+    "health dashboard pharmacy",
+    "manage prescriptions online",
+    "pharmacy account Kenya",
+    "order history pharmacy",
+    "Our Mall Pharmacy account",
+    "medication refill reminders",
+  ],
+  openGraph: {
+    title: "My Health | Our Mall Pharmacy",
+    description: "Manage your account, prescriptions, orders and health dashboard.",
+    url: "https://ourmallpharmacy.com/account/",
+  },
 };
 
 export default function AccountPage() {

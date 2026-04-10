@@ -6,7 +6,7 @@ const cspHeader = `
   default-src 'self';
   script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""};
   style-src 'self' 'unsafe-inline';
-  img-src 'self' blob: data: ${process.env.NEXT_PUBLIC_WORDPRESS_URL || "http://localhost"};
+  img-src 'self' blob: data: https: ${process.env.NEXT_PUBLIC_WORDPRESS_URL || "http://localhost"};
   font-src 'self' data:;
   connect-src 'self' ${process.env.NEXT_PUBLIC_OMP_API_URL || "http://localhost"} ${process.env.NEXT_PUBLIC_WOOCOMMERCE_URL || "http://localhost"} https://api.safaricom.co.ke;
   object-src 'none';

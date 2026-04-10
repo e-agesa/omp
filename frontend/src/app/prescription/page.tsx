@@ -5,6 +5,20 @@ export const metadata: Metadata = {
   title: "Upload Prescription",
   description:
     "Upload your prescription and get medicines delivered. Get pharmacist support and fast delivery across Nairobi.",
+  keywords: [
+    "upload prescription online",
+    "pharmacist review Kenya",
+    "prescription delivery Nairobi",
+    "online prescription pharmacy",
+    "Our Mall Pharmacy prescription",
+    "medicine delivery Kenya",
+  ],
+  openGraph: {
+    title: "Upload Prescription | Our Mall Pharmacy",
+    description:
+      "Upload your prescription and get medicines delivered. Get pharmacist support and fast delivery across Nairobi.",
+    url: "https://ourmallpharmacy.com/prescription/",
+  },
 };
 
 export default function PrescriptionPage() {

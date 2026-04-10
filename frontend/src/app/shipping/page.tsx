@@ -3,7 +3,20 @@ import { LegalPage } from "@/components/legal/LegalPage";
 
 export const metadata: Metadata = {
   title: "Shipping Policy",
-  description: "OMP Shipping Policy — delivery zones, times, costs, and tracking information.",
+  description: "Our Mall Pharmacy Shipping Policy — delivery zones, times, costs, and tracking information.",
+  keywords: [
+    "pharmacy delivery Nairobi",
+    "shipping policy Kenya",
+    "medicine delivery zones",
+    "Our Mall Pharmacy delivery",
+    "free delivery pharmacy Nairobi",
+    "same day delivery medicine",
+  ],
+  openGraph: {
+    title: "Shipping Policy | Our Mall Pharmacy",
+    description: "Our Mall Pharmacy Shipping Policy — delivery zones, times, costs, and tracking information.",
+    url: "https://ourmallpharmacy.com/shipping/",
+  },
 };
 
 export default function ShippingPage() {

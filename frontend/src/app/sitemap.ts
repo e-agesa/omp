@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://onlinemegapharmacy.co.ke";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ourmallpharmacy.com";
 
   const staticPages = [
     "",
@@ -22,18 +22,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const categoryPages = [
-    "/category/pain-relief",
-    "/category/supplements",
+    "/category/medicines",
+    "/category/general",
     "/category/beauty",
-    "/category/mother-baby",
-    "/category/chronic-care",
+    "/category/supplements",
     "/category/cold-flu",
+    "/category/eye-ear-care",
     "/category/first-aid",
     "/category/sexual-health",
-    "/category/digestive-health",
-    "/category/eye-ear-care",
-    "/category/oral-care",
+    "/category/mother-baby",
     "/category/medical-devices",
+    "/category/digestive-health",
+    "/category/pain-relief",
+    "/category/oral-care",
+    "/category/chronic-care",
+    "/category/incontinence",
   ];
 
   return [

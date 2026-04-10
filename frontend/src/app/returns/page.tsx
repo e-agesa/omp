@@ -4,7 +4,20 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Return & Refund Policy",
-  description: "OMP Return & Refund Policy — learn how to return products and request refunds.",
+  description: "Our Mall Pharmacy Return & Refund Policy — learn how to return products and request refunds.",
+  keywords: [
+    "pharmacy return policy Kenya",
+    "refund policy pharmacy",
+    "return medicine Nairobi",
+    "Our Mall Pharmacy returns",
+    "pharmacy exchange policy",
+    "M-Pesa refund pharmacy",
+  ],
+  openGraph: {
+    title: "Return & Refund Policy | Our Mall Pharmacy",
+    description: "Our Mall Pharmacy Return & Refund Policy — learn how to return products and request refunds.",
+    url: "https://ourmallpharmacy.com/returns/",
+  },
 };
 
 export default function ReturnsPage() {
