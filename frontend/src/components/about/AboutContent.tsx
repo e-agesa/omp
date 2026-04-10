@@ -63,7 +63,7 @@ const TIMELINE = [
   { year: "2021", title: "First Delivery", description: "We partnered with our first pharmacy and made our first same-day delivery to Kilimani." },
   { year: "2022", title: "M-Pesa Integration", description: "One-tap M-Pesa checkout launched. No more cash on delivery friction." },
   { year: "2023", title: "10,000 Products", description: "Our catalogue grew to cover medicines, beauty, supplements, and chronic care." },
-  { year: "2024", title: "Smart Prescriptions", description: "Launched the AI-assisted prescription portal with insurance integration." },
+  { year: "2024", title: "Smart Prescriptions", description: "Launched the AI-assisted prescription portal with pharmacist support." },
   { year: "2025", title: "The Future", description: "Expanding to Mombasa, Kisumu, and Nakuru. Building Kenya's health infrastructure." },
 ];
 

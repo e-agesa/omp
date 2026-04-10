@@ -110,30 +110,16 @@ export interface Address {
 }
 
 // ── Prescription Types ──
-export type PrescriptionStep = "upload" | "insurance" | "callback" | "review";
+export type PrescriptionStep = "upload" | "callback" | "review";
 
 export interface Prescription {
   id?: number;
   file: File | null;
   preview: string | null;
-  insurance_provider: InsuranceProvider;
   wants_pharmacist_callback: boolean;
   notes: string;
   status: PrescriptionStatus;
 }
-
-export type InsuranceProvider =
-  | "Out-of-pocket"
-  | "Jubilee"
-  | "GA Insurance"
-  | "AAR"
-  | "Britam"
-  | "CIC"
-  | "Madison"
-  | "UAP Old Mutual"
-  | "Heritage"
-  | "NHIF"
-  | "Other";
 
 export type PrescriptionStatus =
   | "pending"

@@ -4,7 +4,7 @@ import { PrescriptionUpload } from "@/components/prescription/PrescriptionUpload
 export const metadata: Metadata = {
   title: "Upload Prescription",
   description:
-    "Upload your prescription and get medicines delivered. Choose your insurance provider and get pharmacist support.",
+    "Upload your prescription and get medicines delivered. Get pharmacist support and fast delivery across Nairobi.",
 };
 
 export default function PrescriptionPage() {

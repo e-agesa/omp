@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Medicines",
+    "slug": "medicines",
+    "count": 675
+  },
+  {
+    "name": "General Health",
+    "slug": "general",
+    "count": 603
+  },
+  {
+    "name": "Beauty & Skincare",
+    "slug": "beauty",
+    "count": 171
+  },
+  {
+    "name": "Vitamins & Supplements",
+    "slug": "supplements",
+    "count": 60
+  },
+  {
+    "name": "Cold & Flu",
+    "slug": "cold-flu",
+    "count": 56
+  },
+  {
+    "name": "Eye & Ear Care",
+    "slug": "eye-ear-care",
+    "count": 55
+  },
+  {
+    "name": "First Aid & Surgical",
+    "slug": "first-aid",
+    "count": 45
+  },
+  {
+    "name": "Sexual Health",
+    "slug": "sexual-health",
+    "count": 28
+  },
+  {
+    "name": "Mother & Baby",
+    "slug": "mother-baby",
+    "count": 17
+  },
+  {
+    "name": "Medical Devices",
+    "slug": "medical-devices",
+    "count": 14
+  },
+  {
+    "name": "Digestive Health",
+    "slug": "digestive-health",
+    "count": 12
+  },
+  {
+    "name": "Pain Relief",
+    "slug": "pain-relief",
+    "count": 12
+  },
+  {
+    "name": "Oral Care",
+    "slug": "oral-care",
+    "count": 12
+  },
+  {
+    "name": "Chronic Care",
+    "slug": "chronic-care",
+    "count": 11
+  },
+  {
+    "name": "Incontinence Care",
+    "slug": "incontinence",
+    "count": 2
+  }
+]

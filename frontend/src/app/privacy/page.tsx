@@ -20,7 +20,7 @@ export default function PrivacyPage() {
       <ul>
         <li><strong>Identity Data:</strong> Full name, date of birth, gender</li>
         <li><strong>Contact Data:</strong> Email address, phone number, delivery address</li>
-        <li><strong>Health Data:</strong> Prescription details, insurance information, medication history</li>
+        <li><strong>Health Data:</strong> Prescription details, medication history</li>
         <li><strong>Financial Data:</strong> M-Pesa phone number, payment transaction records</li>
         <li><strong>Technical Data:</strong> IP address, browser type, device information</li>
       </ul>
@@ -65,7 +65,7 @@ export default function PrivacyPage() {
       <ul>
         <li><strong>Delivery Partners:</strong> Name and address for order fulfillment</li>
         <li><strong>Payment Processors:</strong> Safaricom (M-Pesa), Visa/Mastercard processors</li>
-        <li><strong>Insurance Providers:</strong> Only with your explicit consent for claims processing</li>
+        <li><strong>Healthcare Partners:</strong> Only with your explicit consent for prescription processing</li>
         <li><strong>Regulatory Bodies:</strong> When required by law (PPB, Ministry of Health)</li>
       </ul>
       <p>We will never sell your personal information to third parties.</p>

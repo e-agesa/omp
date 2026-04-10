@@ -1,29 +1,22 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import type { PrescriptionStep, InsuranceProvider, Prescription } from "@/types";
 import { uploadPrescription } from "@/lib/omp-api";
 
-const INSURANCE_PROVIDERS: InsuranceProvider[] = [
-  "Out-of-pocket",
-  "Jubilee",
-  "GA Insurance",
-  "AAR",
-  "Britam",
-  "CIC",
-  "Madison",
-  "UAP Old Mutual",
-  "Heritage",
-  "NHIF",
-  "Other",
-];
+type PrescriptionStep = "upload" | "callback" | "review";
 
 const STEPS: { key: PrescriptionStep; label: string }[] = [
   { key: "upload", label: "Upload" },
-  { key: "insurance", label: "Insurance" },
   { key: "callback", label: "Preferences" },
   { key: "review", label: "Submit" },
 ];
+
+interface PrescriptionData {
+  file: File | null;
+  preview: string | null;
+  wants_pharmacist_callback: boolean;
+  notes: string;
+}
 
 export function PrescriptionUpload() {
   const [step, setStep] = useState<PrescriptionStep>("upload");
@@ -31,13 +24,11 @@ export function PrescriptionUpload() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [prescription, setPrescription] = useState<Prescription>({
+  const [prescription, setPrescription] = useState<PrescriptionData>({
     file: null,
     preview: null,
-    insurance_provider: "Out-of-pocket",
     wants_pharmacist_callback: false,
     notes: "",
-    status: "pending",
   });
 
   const currentIndex = STEPS.findIndex((s) => s.key === step);
@@ -79,7 +70,6 @@ export function PrescriptionUpload() {
     try {
       const formData = new FormData();
       formData.append("prescription", prescription.file);
-      formData.append("insurance_provider", prescription.insurance_provider);
       formData.append("wants_callback", String(prescription.wants_pharmacist_callback));
       formData.append("notes", prescription.notes);
 
@@ -105,7 +95,7 @@ export function PrescriptionUpload() {
           Your prescription is pending pharmacist review. We&apos;ll notify you once it&apos;s ready.
         </p>
         <button
-          onClick={() => { setSubmitted(false); setStep("upload"); setPrescription({ file: null, preview: null, insurance_provider: "Out-of-pocket", wants_pharmacist_callback: false, notes: "", status: "pending" }); }}
+          onClick={() => { setSubmitted(false); setStep("upload"); setPrescription({ file: null, preview: null, wants_pharmacist_callback: false, notes: "" }); }}
           className="mt-4 text-sm text-omp-blue font-medium hover:underline"
         >
           Upload another prescription
@@ -198,7 +188,7 @@ export function PrescriptionUpload() {
               )}
             </div>
             <button
-              onClick={() => setStep("insurance")}
+              onClick={() => setStep("callback")}
               disabled={!prescription.file}
               className="mt-4 w-full bg-omp-blue text-white font-semibold py-3 rounded-medical disabled:opacity-40 hover:bg-omp-blue-light transition-colors"
             >
@@ -207,40 +197,7 @@ export function PrescriptionUpload() {
           </div>
         )}
 
-        {/* Step 2: Insurance */}
-        {step === "insurance" && (
-          <div>
-            <h3 className="text-lg font-bold text-omp-dark mb-1">Insurance Provider</h3>
-            <p className="text-sm text-omp-gray mb-4">
-              Select your insurance provider or choose out-of-pocket.
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              {INSURANCE_PROVIDERS.map((provider) => (
-                <button
-                  key={provider}
-                  onClick={() => setPrescription((p) => ({ ...p, insurance_provider: provider }))}
-                  className={`py-2.5 px-3 rounded-medical border text-sm font-medium transition-all ${
-                    prescription.insurance_provider === provider
-                      ? "border-omp-blue bg-omp-blue/5 text-omp-blue"
-                      : "border-omp-gray-light text-omp-dark hover:border-omp-blue/30"
-                  }`}
-                >
-                  {provider}
-                </button>
-              ))}
-            </div>
-            <div className="flex gap-3 mt-4">
-              <button onClick={() => setStep("upload")} className="flex-1 py-3 rounded-medical border border-omp-gray-light text-sm font-medium text-omp-dark hover:bg-omp-slate transition-colors">
-                Back
-              </button>
-              <button onClick={() => setStep("callback")} className="flex-1 bg-omp-blue text-white font-semibold py-3 rounded-medical hover:bg-omp-blue-light transition-colors">
-                Continue
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Step 3: Callback preference */}
+        {/* Step 2: Callback preference */}
         {step === "callback" && (
           <div>
             <h3 className="text-lg font-bold text-omp-dark mb-1">Preferences</h3>
@@ -272,7 +229,7 @@ export function PrescriptionUpload() {
             />
 
             <div className="flex gap-3 mt-4">
-              <button onClick={() => setStep("insurance")} className="flex-1 py-3 rounded-medical border border-omp-gray-light text-sm font-medium text-omp-dark hover:bg-omp-slate transition-colors">
+              <button onClick={() => setStep("upload")} className="flex-1 py-3 rounded-medical border border-omp-gray-light text-sm font-medium text-omp-dark hover:bg-omp-slate transition-colors">
                 Back
               </button>
               <button onClick={() => setStep("review")} className="flex-1 bg-omp-blue text-white font-semibold py-3 rounded-medical hover:bg-omp-blue-light transition-colors">
@@ -282,7 +239,7 @@ export function PrescriptionUpload() {
           </div>
         )}
 
-        {/* Step 4: Review & Submit */}
+        {/* Step 3: Review & Submit */}
         {step === "review" && (
           <div>
             <h3 className="text-lg font-bold text-omp-dark mb-4">Review & Submit</h3>
@@ -290,10 +247,6 @@ export function PrescriptionUpload() {
               <div className="flex justify-between py-2 border-b border-omp-gray-light">
                 <span className="text-sm text-omp-gray">File</span>
                 <span className="text-sm font-medium text-omp-dark">{prescription.file?.name}</span>
-              </div>
-              <div className="flex justify-between py-2 border-b border-omp-gray-light">
-                <span className="text-sm text-omp-gray">Insurance</span>
-                <span className="text-sm font-medium text-omp-dark">{prescription.insurance_provider}</span>
               </div>
               <div className="flex justify-between py-2 border-b border-omp-gray-light">
                 <span className="text-sm text-omp-gray">Pharmacist callback</span>

@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 
 interface Slide {
   id: number;
@@ -80,31 +80,31 @@ const SLIDES: Slide[] = [
 ];
 
 /* Slide transition variants */
-const imageVariants = {
+const imageVariants: Variants = {
   enter: { opacity: 0, scale: 1.08 },
   center: { opacity: 1, scale: 1, transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] } },
   exit: { opacity: 0, scale: 0.97, transition: { duration: 0.4 } },
 };
 
-const contentVariants = {
+const contentVariants: Variants = {
   enter: { opacity: 0, y: 40, filter: "blur(4px)" },
   center: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] } },
   exit: { opacity: 0, y: -30, filter: "blur(4px)", transition: { duration: 0.3 } },
 };
 
-const titleVariants = {
+const titleVariants: Variants = {
   enter: { opacity: 0, x: -30 },
   center: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.3, ease: "easeOut" } },
   exit: { opacity: 0, x: 30, transition: { duration: 0.25 } },
 };
 
-const subtitleVariants = {
+const subtitleVariants: Variants = {
   enter: { opacity: 0, y: 20 },
   center: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.45, ease: "easeOut" } },
   exit: { opacity: 0, transition: { duration: 0.2 } },
 };
 
-const ctaVariants = {
+const ctaVariants: Variants = {
   enter: { opacity: 0, scale: 0.8 },
   center: { opacity: 1, scale: 1, transition: { duration: 0.4, delay: 0.55, type: "spring", stiffness: 200 } },
   exit: { opacity: 0, scale: 0.9, transition: { duration: 0.2 } },

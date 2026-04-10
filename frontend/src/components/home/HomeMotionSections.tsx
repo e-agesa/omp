@@ -11,6 +11,8 @@ import {
   scaleUp,
   motion,
 } from "@/components/motion";
+import { SimpleProductCard } from "@/components/product/SimpleProductCard";
+import productsData from "@/data/products.json";
 
 /* ── Promo Banners ── */
 function PromoBanners() {
@@ -61,28 +63,27 @@ function DeliveryBanner() {
   );
 }
 
-/* ── Featured Products Skeleton ── */
+/* ── Featured Products ── */
 function FeaturedProducts() {
+  // Show first 6 in-stock products sorted by price (high to low) as "popular"
+  const featured = (productsData as { id: number; name: string; slug: string; price: number; category: string; category_name: string; in_stock: boolean }[])
+    .filter((p) => p.in_stock && p.price > 100)
+    .sort((a, b) => b.price - a.price)
+    .slice(0, 6);
+
   return (
     <MotionSection>
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-bold text-omp-dark">Popular Products</h2>
-          <Link href="/shop" className="text-sm text-omp-blue font-medium hover:underline">
+          <Link href="/shop/" className="text-sm text-omp-blue font-medium hover:underline">
             View all
           </Link>
         </div>
         <StaggerGroup className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <StaggerItem key={i}>
-              <div className="bg-omp-white rounded-medical shadow-card overflow-hidden animate-pulse">
-                <div className="aspect-square bg-omp-gray-light" />
-                <div className="p-3 space-y-2">
-                  <div className="h-3 bg-omp-gray-light rounded w-1/3" />
-                  <div className="h-4 bg-omp-gray-light rounded w-3/4" />
-                  <div className="h-4 bg-omp-gray-light rounded w-1/2" />
-                </div>
-              </div>
+          {featured.map((product) => (
+            <StaggerItem key={product.id}>
+              <SimpleProductCard product={product} />
             </StaggerItem>
           ))}
         </StaggerGroup>

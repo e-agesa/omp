@@ -51,10 +51,12 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  output: "export",
   allowedDevOrigins: ["192.168.1.119"],
+  trailingSlash: true,
 
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "http",
@@ -64,17 +66,15 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "**.onlinemegapharmacy.co.ke",
       },
+      {
+        protocol: "https",
+        hostname: "**.ourmallpharmacy.com",
+      },
     ],
   },
 
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: securityHeaders,
-      },
-    ];
-  },
+  // Security headers handled by LiteSpeed/.htaccess in production
+  // async headers() not supported with output: "export"
 };
 
 export default nextConfig;
