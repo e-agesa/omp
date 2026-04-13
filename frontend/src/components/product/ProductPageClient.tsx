@@ -19,6 +19,11 @@ interface LocalProduct {
   stock_quantity: number;
   sku: string;
   image?: string;
+  short_description?: string;
+  description?: string;
+  tags?: string[];
+  seo_title?: string;
+  seo_description?: string;
 }
 
 export function ProductPageClient({ slug: initialSlug }: { slug: string }) {
@@ -220,6 +225,29 @@ export function ProductPageClient({ slug: initialSlug }: { slug: string }) {
           </div>
         </div>
       </div>
+
+      {/* Product Description (from WooCommerce SEO content) */}
+      {product.description && (
+        <div className="max-w-5xl mx-auto mt-10">
+          <div className="bg-omp-white rounded-medical shadow-card p-6 lg:p-8">
+            <div
+              className="prose prose-sm max-w-none text-omp-gray prose-headings:text-omp-dark prose-h3:text-lg prose-h4:text-base prose-a:text-omp-blue prose-li:marker:text-omp-blue"
+              dangerouslySetInnerHTML={{ __html: product.description }}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Tags */}
+      {product.tags && product.tags.length > 0 && (
+        <div className="max-w-5xl mx-auto mt-4 flex flex-wrap gap-2">
+          {product.tags.map((tag) => (
+            <span key={tag} className="text-xs bg-omp-slate text-omp-gray px-3 py-1 rounded-pill">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
