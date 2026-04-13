@@ -7,9 +7,9 @@ import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 const CONTACT_METHODS = [
   {
     title: "Call Us",
-    detail: "+254 700 000 000",
-    description: "Mon - Sat, 8am - 8pm",
-    href: "tel:+254700000000",
+    detail: "+254 722 390 003",
+    description: "Mon-Sat 9AM-8PM, Sun 10:30AM-6PM",
+    href: "tel:+254722390003",
     color: "bg-omp-blue",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -21,7 +21,7 @@ const CONTACT_METHODS = [
     title: "WhatsApp",
     detail: "Chat with a Pharmacist",
     description: "Instant responses",
-    href: "https://wa.me/254700000000?text=Hi%2C%20I%20need%20help.",
+    href: "https://wa.me/254740686263?text=Hi%2C%20I%20need%20help.",
     color: "bg-whatsapp",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -31,9 +31,9 @@ const CONTACT_METHODS = [
   },
   {
     title: "Email Us",
-    detail: "support@omp.co.ke",
+    detail: "ourmallpharmacy@gmail.com",
     description: "We reply within 2 hours",
-    href: "mailto:support@omp.co.ke",
+    href: "mailto:ourmallpharmacy@gmail.com",
     color: "bg-omp-red",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -43,8 +43,8 @@ const CONTACT_METHODS = [
   },
   {
     title: "Visit Us",
-    detail: "Nairobi, Kenya",
-    description: "By appointment only",
+    detail: "Our Mall, Off Magadi Rd, Avocado Lane, Ground Floor (Shop No. 22)",
+    description: "Mon-Sat 9AM-8PM, Sun 10:30AM-6PM",
     href: "#map",
     color: "bg-amber-500",
     icon: (

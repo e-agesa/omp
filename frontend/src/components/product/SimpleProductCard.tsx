@@ -117,7 +117,7 @@ export function SimpleProductCard({ product }: { product: SimpleProduct }) {
         {/* WhatsApp Order Button */}
         <div className="mt-2">
           <a
-            href={`https://wa.me/254700000000?text=${encodeURIComponent(`Hi, I'd like to order: ${product.name}`)}`}
+            href={`https://wa.me/254740686263?text=${encodeURIComponent(`Hi, I'd like to order: ${product.name}`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-1.5 w-full py-2 rounded-medical bg-whatsapp text-white text-xs font-semibold hover:brightness-110 transition-all"

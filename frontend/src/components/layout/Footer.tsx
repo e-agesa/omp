@@ -25,9 +25,11 @@ export function Footer() {
                 className="h-18 sm:h-20 w-auto object-contain rounded-medical"
               />
             </Link>
-            <p className="mt-3 text-sm text-gray-400">
-              Our Mall Pharmacy — Kenya&apos;s trusted online pharmacy.
-              Quality medicines delivered to your doorstep.
+            <p className="mt-3 text-sm text-gray-400 italic">
+              &quot;We treat, The Almighty Cures&quot;
+            </p>
+            <p className="mt-2 text-sm text-gray-400">
+              Kenya&apos;s trusted pharmacy. Quality medicines delivered to your doorstep.
             </p>
             {/* PPB Verification */}
             <div className="mt-4 flex items-center gap-2 bg-white/10 rounded-medical p-3">
@@ -84,16 +86,24 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold mb-3">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>Nairobi, Kenya</li>
+              <li>Our Mall, Off Magadi Rd, Avocado Lane, Ground Floor (Shop No. 22)</li>
               <li>
-                <a href="tel:+254700000000" className="hover:text-white transition-colors">
-                  +254 700 000 000
+                <a href="tel:+254722390003" className="hover:text-white transition-colors">
+                  +254 722 390 003
                 </a>
               </li>
               <li>
-                <a href="mailto:support@omp.co.ke" className="hover:text-white transition-colors">
-                  support@omp.co.ke
+                <a href="tel:+254740686263" className="hover:text-white transition-colors">
+                  +254 740 686 263 (WhatsApp)
                 </a>
+              </li>
+              <li>
+                <a href="mailto:ourmallpharmacy@gmail.com" className="hover:text-white transition-colors">
+                  ourmallpharmacy@gmail.com
+                </a>
+              </li>
+              <li className="text-xs text-gray-500 pt-1">
+                Mon-Sat: 9AM-8PM | Sun: 10:30AM-6PM
               </li>
             </ul>
             {/* Payment badges */}

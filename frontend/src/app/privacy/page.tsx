@@ -108,9 +108,9 @@ export default function PrivacyPage() {
         For any privacy-related inquiries, please contact our Data Protection Officer:
       </p>
       <ul>
-        <li>Email: <strong>privacy@omp.co.ke</strong></li>
-        <li>Phone: <strong>+254 700 000 000</strong></li>
-        <li>Address: Nairobi, Kenya</li>
+        <li>Email: <strong>ourmallpharmacy@gmail.com</strong></li>
+        <li>Phone: <strong>+254 722 390 003</strong></li>
+        <li>Address: Our Mall, Off Magadi Rd, Avocado Lane, Ground Floor (Shop No. 22)</li>
       </ul>
     </LegalPage>
   );

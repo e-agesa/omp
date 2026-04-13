@@ -49,7 +49,7 @@ export default function ReturnsPage() {
 
       <h2>4. How to Request a Return</h2>
       <ol>
-        <li>Contact our support team via <strong>WhatsApp</strong>, <strong>email (support@omp.co.ke)</strong>, or <strong>phone (+254 700 000 000)</strong></li>
+        <li>Contact our support team via <strong>WhatsApp (+254 740 686 263)</strong>, <strong>email (ourmallpharmacy@gmail.com)</strong>, or <strong>phone (+254 722 390 003)</strong></li>
         <li>Provide your <strong>order number</strong> and reason for return</li>
         <li>Include <strong>photos</strong> of the product (required for damaged/wrong items)</li>
         <li>Our team will review your request within <strong>24 hours</strong></li>

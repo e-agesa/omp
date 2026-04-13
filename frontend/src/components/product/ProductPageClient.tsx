@@ -181,7 +181,7 @@ export function ProductPageClient({ slug: initialSlug }: { slug: string }) {
           {/* WhatsApp Order */}
           <div className="mt-6">
             <a
-              href={`https://wa.me/254700000000?text=${encodeURIComponent(`Hi, I'd like to order: ${product.name}\n\nProduct link: https://ourmallpharmacy.com/product/${product.slug}/`)}`}
+              href={`https://wa.me/254740686263?text=${encodeURIComponent(`Hi, I'd like to order: ${product.name}\n\nProduct link: https://ourmallpharmacy.com/product/${product.slug}/`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full py-3.5 rounded-medical bg-whatsapp text-white font-semibold hover:brightness-110 transition-all"

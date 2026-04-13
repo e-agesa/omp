@@ -117,7 +117,7 @@ export default function ShippingPage() {
 
       <h2>8. Contact</h2>
       <p>
-        For delivery inquiries, contact us at <strong>support@omp.co.ke</strong> or call <strong>+254 700 000 000</strong>.
+        For delivery inquiries, contact us at <strong>ourmallpharmacy@gmail.com</strong> or call <strong>+254 722 390 003</strong>.
       </p>
     </LegalPage>
   );

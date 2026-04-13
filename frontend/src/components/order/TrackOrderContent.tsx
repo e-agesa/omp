@@ -200,8 +200,8 @@ export function TrackOrderContent() {
                 Contact Support
               </Link>{" "}
               or call us at{" "}
-              <a href="tel:+254700000000" className="text-omp-blue hover:underline">
-                +254 700 000 000
+              <a href="tel:+254722390003" className="text-omp-blue hover:underline">
+                +254 722 390 003
               </a>
             </p>
           </div>
