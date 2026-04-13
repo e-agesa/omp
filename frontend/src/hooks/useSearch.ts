@@ -1,8 +1,25 @@
 "use client";
 
 import { useState, useCallback, useRef } from "react";
-import { globalSearch } from "@/lib/omp-api";
-import type { SearchResult } from "@/types";
+import productsData from "@/data/products.json";
+
+interface SearchResult {
+  type: string;
+  id: number;
+  title: string;
+  slug: string;
+  price?: string;
+}
+
+interface ProductItem {
+  id: number;
+  name: string;
+  slug: string;
+  price: number;
+  category_name: string;
+}
+
+const allProducts = productsData as ProductItem[];
 
 export function useSearch() {
   const [query, setQuery] = useState("");
@@ -22,18 +39,24 @@ export function useSearch() {
       return;
     }
 
-    debounceRef.current = setTimeout(async () => {
+    debounceRef.current = setTimeout(() => {
       setLoading(true);
-      try {
-        const data = await globalSearch(value);
-        setResults(data);
-        setIsOpen(data.length > 0);
-      } catch {
-        setResults([]);
-      } finally {
-        setLoading(false);
-      }
-    }, 300);
+
+      const q = value.toLowerCase();
+      const matches = allProducts
+        .filter((p) => p.name.toLowerCase().includes(q))
+        .slice(0, 8)
+        .map((p) => ({
+          type: "product" as const,
+          id: p.id,
+          title: p.name,
+          slug: p.slug,
+        }));
+
+      setResults(matches);
+      setIsOpen(matches.length > 0);
+      setLoading(false);
+    }, 150);
   }, []);
 
   const close = useCallback(() => {
