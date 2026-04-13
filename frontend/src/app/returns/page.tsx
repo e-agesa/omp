@@ -25,7 +25,7 @@ export default function ReturnsPage() {
     <LegalPage title="Return & Refund Policy" lastUpdated="April 1, 2026">
       <h2>1. Overview</h2>
       <p>
-        At OMP, your satisfaction is important to us. This policy outlines the conditions under which you may return products and request refunds.
+        At Our Mall Pharmacy, your satisfaction is important to us. This policy outlines the conditions under which you may return products and request refunds.
       </p>
 
       <h2>2. Eligible Returns</h2>

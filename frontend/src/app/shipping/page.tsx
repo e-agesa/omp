@@ -24,7 +24,7 @@ export default function ShippingPage() {
     <LegalPage title="Shipping Policy" lastUpdated="April 1, 2026">
       <h2>1. Delivery Areas</h2>
       <p>
-        OMP currently delivers across the greater Nairobi metropolitan area. We are expanding to Mombasa, Kisumu, and Nakuru soon.
+        Our Mall Pharmacy currently delivers across the greater Nairobi metropolitan area. We are expanding to Mombasa, Kisumu, and Nakuru soon.
       </p>
 
       <h3>Nairobi Zones &amp; Estimated Delivery Times</h3>

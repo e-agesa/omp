@@ -24,7 +24,7 @@ export default function PrivacyPage() {
     <LegalPage title="Privacy Policy" lastUpdated="April 1, 2026">
       <h2>1. Introduction</h2>
       <p>
-        Online Mega Pharmacy (&quot;OMP&quot;, &quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
+        Our Mall Pharmacy (&quot;OMP&quot;, &quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
       </p>
 
       <h2>2. Information We Collect</h2>

@@ -24,11 +24,11 @@ export default function TermsPage() {
     <LegalPage title="Terms of Service" lastUpdated="April 1, 2026">
       <h2>1. Acceptance of Terms</h2>
       <p>
-        By accessing and using the Online Mega Pharmacy (&quot;OMP&quot;) website and services, you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.
+        By accessing and using the Our Mall Pharmacy (&quot;OMP&quot;) website and services, you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.
       </p>
 
       <h2>2. Services</h2>
-      <p>OMP provides the following services through our platform:</p>
+      <p>Our Mall Pharmacy provides the following services through our platform:</p>
       <ul>
         <li>Online sale and delivery of pharmaceutical products, health supplements, beauty products, and medical devices</li>
         <li>Prescription upload and processing by licensed pharmacists</li>
@@ -39,13 +39,13 @@ export default function TermsPage() {
 
       <h2>3. Eligibility</h2>
       <p>
-        You must be at least 18 years old to create an account and purchase products from OMP. By using our services, you represent that you are of legal age and have the capacity to enter into a binding agreement.
+        You must be at least 18 years old to create an account and purchase products from Our Mall Pharmacy. By using our services, you represent that you are of legal age and have the capacity to enter into a binding agreement.
       </p>
 
       <h2>4. Prescription Medicines</h2>
       <ul>
         <li>Prescription medicines will only be dispensed upon receipt and verification of a valid prescription from a registered medical practitioner</li>
-        <li>OMP reserves the right to reject any prescription that appears altered, expired, or fraudulent</li>
+        <li>Our Mall Pharmacy reserves the right to reject any prescription that appears altered, expired, or fraudulent</li>
         <li>Our pharmacists may contact your prescribing doctor for verification</li>
         <li>Prescription medicines are non-returnable once dispensed, in accordance with Kenyan pharmaceutical law</li>
       </ul>
@@ -69,22 +69,22 @@ export default function TermsPage() {
 
       <h2>7. User Accounts</h2>
       <p>
-        You are responsible for maintaining the confidentiality of your account credentials. You agree to notify us immediately of any unauthorized use of your account. OMP is not liable for losses arising from unauthorized account access.
+        You are responsible for maintaining the confidentiality of your account credentials. You agree to notify us immediately of any unauthorized use of your account. Our Mall Pharmacy is not liable for losses arising from unauthorized account access.
       </p>
 
       <h2>8. Intellectual Property</h2>
       <p>
-        All content on the OMP website, including text, graphics, logos, images, and software, is the property of Online Mega Pharmacy and is protected by Kenyan and international copyright laws. You may not reproduce, distribute, or create derivative works without our written consent.
+        All content on the Our Mall Pharmacy website, including text, graphics, logos, images, and software, is the property of Our Mall Pharmacy and is protected by Kenyan and international copyright laws. You may not reproduce, distribute, or create derivative works without our written consent.
       </p>
 
       <h2>9. Limitation of Liability</h2>
       <p>
-        OMP shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services. Our total liability shall not exceed the amount paid by you for the specific order giving rise to the claim.
+        Our Mall Pharmacy shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services. Our total liability shall not exceed the amount paid by you for the specific order giving rise to the claim.
       </p>
 
       <h2>10. Disclaimer</h2>
       <p>
-        Health information provided on our website is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare provider for medical decisions. OMP is not a substitute for professional medical consultation.
+        Health information provided on our website is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare provider for medical decisions. Our Mall Pharmacy is not a substitute for professional medical consultation.
       </p>
 
       <h2>11. Governing Law</h2>

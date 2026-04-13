@@ -19,7 +19,7 @@ interface Clinic {
 const CLINICS: Clinic[] = [
   {
     id: 1,
-    name: "OMP Pharmacy — Westlands",
+    name: "Our Mall Pharmacy — Westlands",
     type: "pharmacy",
     address: "Sarit Centre, Karuna Rd, Westlands",
     area: "Westlands",
@@ -31,7 +31,7 @@ const CLINICS: Clinic[] = [
   },
   {
     id: 2,
-    name: "OMP Pharmacy — CBD",
+    name: "Our Mall Pharmacy — CBD",
     type: "pharmacy",
     address: "Kimathi Street, Nairobi CBD",
     area: "CBD",
@@ -43,7 +43,7 @@ const CLINICS: Clinic[] = [
   },
   {
     id: 3,
-    name: "OMP Pharmacy — Karen",
+    name: "Our Mall Pharmacy — Karen",
     type: "pharmacy",
     address: "Karen Hub Mall, Dagoretti Rd",
     area: "Karen",
@@ -79,7 +79,7 @@ const CLINICS: Clinic[] = [
   },
   {
     id: 6,
-    name: "OMP Pharmacy — Kilimani",
+    name: "Our Mall Pharmacy — Kilimani",
     type: "pharmacy",
     address: "Yaya Centre, Argwings Kodhek Rd",
     area: "Kilimani",
@@ -121,7 +121,7 @@ export function FindClinicContent() {
       <div className="max-w-4xl mx-auto">
         <h1 className="text-2xl font-bold text-omp-dark mb-2">Find a Pharmacy or Clinic</h1>
         <p className="text-sm text-omp-gray mb-6">
-          Locate OMP pharmacies and partner health facilities across Nairobi.
+          Locate Our Mall Pharmacy branches and partner health facilities across Nairobi.
         </p>
 
         {/* Filters */}

@@ -230,7 +230,7 @@ export function ContactContent() {
             <div id="map" className="w-full aspect-4/3 rounded-medical overflow-hidden mb-6 relative">
               <Image
                 src="/images/customer-support.jpg"
-                alt="OMP customer support team ready to help"
+                alt="Our Mall Pharmacy customer support team ready to help"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

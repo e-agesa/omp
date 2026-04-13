@@ -15,7 +15,7 @@ const VALUES = [
   {
     title: "Trust & Safety",
     description:
-      "Every product on OMP is sourced directly from authorized distributors and verified by the Pharmacy & Poisons Board of Kenya. Your health is non-negotiable.",
+      "Every product on Our Mall Pharmacy is sourced directly from authorized distributors and verified by the Pharmacy & Poisons Board of Kenya. Your health is non-negotiable.",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
@@ -59,7 +59,7 @@ const VALUES = [
 ];
 
 const TIMELINE = [
-  { year: "2020", title: "The Idea", description: "OMP was born from a simple question: why is it so hard to get quality medicine delivered in Nairobi?" },
+  { year: "2020", title: "The Idea", description: "Our Mall Pharmacy was born from a simple question: why is it so hard to get quality medicine delivered in Nairobi?" },
   { year: "2021", title: "First Delivery", description: "We partnered with our first pharmacy and made our first same-day delivery to Kilimani." },
   { year: "2022", title: "M-Pesa Integration", description: "One-tap M-Pesa checkout launched. No more cash on delivery friction." },
   { year: "2023", title: "10,000 Products", description: "Our catalogue grew to cover medicines, beauty, supplements, and chronic care." },
@@ -89,7 +89,7 @@ export function AboutContent() {
           <div className="max-w-4xl">
             <AnimateOnScroll animation="fade-in-up">
               <span className="inline-block bg-omp-green/20 text-omp-green-light text-xs font-semibold px-4 py-1.5 rounded-pill mb-6 uppercase tracking-wider">
-                About OMP
+                About Our Mall Pharmacy
               </span>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-in-up" delay={100}>
@@ -101,7 +101,7 @@ export function AboutContent() {
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-in-up" delay={200}>
               <p className="text-lg sm:text-xl text-white/70 max-w-2xl leading-relaxed">
-                Online Mega Pharmacy is Kenya&apos;s digital-first pharmacy — bringing trusted medicines,
+                Our Mall Pharmacy is Kenya&apos;s digital-first pharmacy — bringing trusted medicines,
                 expert pharmacist guidance, and lightning-fast delivery to every home in Nairobi and beyond.
               </p>
             </AnimateOnScroll>
@@ -133,7 +133,7 @@ export function AboutContent() {
               <div className="w-full aspect-4/3 rounded-medical overflow-hidden">
                 <Image
                   src="/images/pharmacist.jpg"
-                  alt="Licensed pharmacist reviewing prescriptions at OMP"
+                  alt="Licensed pharmacist reviewing prescriptions at Our Mall Pharmacy"
                   width={800}
                   height={600}
                   className="w-full h-full object-cover"
@@ -153,12 +153,12 @@ export function AboutContent() {
             </h2>
             <p className="text-omp-gray leading-relaxed mb-4">
               We believe that no one should have to choose between convenience and quality when it comes
-              to their health. OMP bridges the gap between world-class pharmacy services and the everyday
+              to their health. Our Mall Pharmacy bridges the gap between world-class pharmacy services and the everyday
               Kenyan — delivering genuine medicines with the care and speed you deserve.
             </p>
             <p className="text-omp-gray leading-relaxed mb-6">
               From the mother in Karen needing pediatric supplies at midnight, to the professional in
-              Westlands managing a chronic condition — OMP is here for everyone, every time.
+              Westlands managing a chronic condition — Our Mall Pharmacy is here for everyone, every time.
             </p>
             <Link
               href="/prescription"
@@ -199,7 +199,7 @@ export function AboutContent() {
       <section className="px-6 py-16 lg:py-24">
         <AnimateOnScroll animation="fade-in-up" className="text-center mb-12">
           <span className="text-omp-blue text-sm font-semibold uppercase tracking-wider">Our Journey</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-omp-dark mt-3">The OMP Story</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-omp-dark mt-3">The Our Mall Pharmacy Story</h2>
         </AnimateOnScroll>
 
         <div className="relative max-w-3xl mx-auto">
@@ -232,7 +232,7 @@ export function AboutContent() {
       {/* Team Section */}
       <section className="bg-omp-white px-6 py-16 lg:py-24">
         <AnimateOnScroll animation="fade-in-up" className="text-center mb-12">
-          <span className="text-omp-blue text-sm font-semibold uppercase tracking-wider">The People Behind OMP</span>
+          <span className="text-omp-blue text-sm font-semibold uppercase tracking-wider">The People Behind Our Mall Pharmacy</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-omp-dark mt-3">Our Leadership Team</h2>
         </AnimateOnScroll>
 
@@ -268,7 +268,7 @@ export function AboutContent() {
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in-up" delay={100}>
             <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
-              Join thousands of Kenyans who trust OMP for their health needs. Start shopping or upload a prescription today.
+              Join thousands of Kenyans who trust Our Mall Pharmacy for their health needs. Start shopping or upload a prescription today.
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in-up" delay={200}>
