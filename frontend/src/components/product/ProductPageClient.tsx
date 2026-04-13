@@ -24,6 +24,7 @@ interface LocalProduct {
   tags?: string[];
   seo_title?: string;
   seo_description?: string;
+  seo_keyword?: string;
 }
 
 export function ProductPageClient({ slug: initialSlug }: { slug: string }) {
@@ -47,7 +48,53 @@ export function ProductPageClient({ slug: initialSlug }: { slug: string }) {
 
     if (found) {
       setProduct(found);
-      document.title = `${found.name} | Our Mall Pharmacy`;
+
+      // Set SEO meta tags dynamically
+      const title = found.seo_title || `${found.name} - Buy Online Kenya | Our Mall Pharmacy`;
+      document.title = title;
+
+      // Meta description
+      const descContent = found.seo_description || `Buy ${found.name} online in Kenya from Our Mall Pharmacy. Fast delivery across Nairobi & countrywide.`;
+      let metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute("content", descContent);
+      } else {
+        metaDesc = document.createElement("meta");
+        metaDesc.setAttribute("name", "description");
+        metaDesc.setAttribute("content", descContent);
+        document.head.appendChild(metaDesc);
+      }
+
+      // OG tags
+      const setOG = (property: string, content: string) => {
+        let tag = document.querySelector(`meta[property="${property}"]`);
+        if (tag) {
+          tag.setAttribute("content", content);
+        } else {
+          tag = document.createElement("meta");
+          tag.setAttribute("property", property);
+          tag.setAttribute("content", content);
+          document.head.appendChild(tag);
+        }
+      };
+      setOG("og:title", title);
+      setOG("og:description", descContent);
+      setOG("og:url", `https://ourmallpharmacy.com/product/${found.slug}/`);
+      setOG("og:type", "product");
+      if (found.image) setOG("og:image", found.image);
+
+      // Focus keyword
+      if (found.seo_keyword) {
+        let kwTag = document.querySelector('meta[name="keywords"]');
+        if (kwTag) {
+          kwTag.setAttribute("content", found.seo_keyword);
+        } else {
+          kwTag = document.createElement("meta");
+          kwTag.setAttribute("name", "keywords");
+          kwTag.setAttribute("content", found.seo_keyword);
+          document.head.appendChild(kwTag);
+        }
+      }
     }
 
     setLoading(false);
